@@ -40,3 +40,4 @@ out/
 *.uvopt
 *.*~
 *build_log.htm
+../STM32/CMSIS-DAP
