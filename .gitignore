@@ -33,9 +33,10 @@
 
 
 # Exclude FileFolder
-STM32/CMSIS-DAP/
+STM32/CMSIS-DAP/*
 si_load_cell.si4project/
 out/
 *.Administrator
 *.uvopt
 *.*~
+*build_log.htm
