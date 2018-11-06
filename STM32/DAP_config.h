@@ -27,6 +27,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifndef STLINK_V21  
+#define STLINK_V21  
+#endif
+
 typedef const struct
 {
 	void	(* LedConnected)	(uint16_t);
@@ -334,7 +338,7 @@ typedef enum Pin_e {
 
 #if defined ( BOARD_V1 ) || defined ( BOARD_V2 )
 
-	#define LED_CONNECTED_RCC		RCC_APB2ENR_IOPBEN
+	#define LED_CONNECTED_RCC		RCC_APB2ENR_IOPAEN
 
 	// Connected LED (GREEN)
 	#define LED_CONNECTED_PORT      GPIOB
@@ -368,7 +372,7 @@ typedef enum Pin_e {
 	#define LED_CONNECTED_PIN		9
 
 	#define LED_RUNNING_PORT		GPIOA
-	#define LED_RUNNING_PIN			8
+	#define LED_RUNNING_PIN			9
 
 	#define LED_CONNECTED			PIN_MASK(LED_CONNECTED_PIN)
 	#define LED_RUNNING				PIN_MASK(LED_RUNNING_PIN)
